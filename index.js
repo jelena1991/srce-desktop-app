@@ -37,11 +37,11 @@ function createWindow() {
         }
     ]);
 
-    Menu.setApplicationMenu(menu);
+    Menu.setApplicationMenu(null);
 
     window = new BrowserWindow({
-        width: 640,
-        height: 480
+        width: 1200,
+        height: 960
     });
     window.loadFile('public/index.html');
     window.on('closed', () => {
