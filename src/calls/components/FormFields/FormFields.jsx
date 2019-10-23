@@ -2,33 +2,19 @@ import React, { Component } from "react";
 
 const Input = (props) => <input type={props.type} className="form-control" id={props.id} />
 
-const Select = (props) =>
+const Options = (props) =>
+    <>
+        {
+            props.options.map((option) =>
+                <option key={option} value={option}>{option}</option>
+            )
+        }
+    </>
+
+const Select = (props, ...other ) =>
     <select id={props.id} className="form-control">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
+        <Options options={props.options} {...other} />
     </select>
-
-export const InputField = ( props, ...other ) => (
-    <FormFieldGrop id={props.id} label={props.label}>
-        <Input {...other} />
-    </FormFieldGrop>
-);
-
-export const SelectField = ( props ) => (
-    <FormFieldGrop id={props.id} label={props.label}>
-        <Select />
-    </FormFieldGrop>
-);
-
-export const SelectField2 = ( props ) => (
-    <div className="form-group mb-1">
-        <label htmlFor={props.id} className="mb-1">{props.label}</label>
-        <Select />
-    </div>
-);
 
 const FormFieldGrop = ({ id, label, children }) => (
     <div className="form-group row mb-1 px-2">
@@ -36,6 +22,25 @@ const FormFieldGrop = ({ id, label, children }) => (
         <div className="col-6 col-lg-7 col-xl-8 p-1">
             {children}
         </div>
+    </div>
+);
+
+export const InputField = ( props, ...other ) => (
+    <FormFieldGrop id={props.id} label={props.label}>
+        <Input {...other} />
+    </FormFieldGrop>
+);
+
+export const SelectField = ( props, ...other ) => (
+    <FormFieldGrop id={props.id} label={props.label}>
+        <Select options={props.options}  {...other}/>
+    </FormFieldGrop>
+);
+
+export const SelectField2 = ( props, ...other ) => (
+    <div className="form-group mb-1">
+        <label htmlFor={props.id} className="mb-1">{props.label}</label>
+        <Select options={props.options} {...other}/>
     </div>
 );
 
