@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-const Input = (props) => <input type={props.type} className="form-control" id={props.id} />
-
 const Options = (props) =>
     <>
         {
@@ -10,11 +8,6 @@ const Options = (props) =>
             )
         }
     </>
-
-const Select = (props, ...other ) =>
-    <select id={props.id} className="form-control">
-        <Options options={props.options} {...other} />
-    </select>
 
 const FormFieldGrop = ({ id, label, children }) => (
     <div className="form-group row mb-1 px-2">
@@ -25,27 +18,28 @@ const FormFieldGrop = ({ id, label, children }) => (
     </div>
 );
 
-export const InputField = ( props, ...other ) => (
+export const Input = ( props, ...other ) => (
     <FormFieldGrop id={props.id} label={props.label}>
-        <Input {...other} />
+        <input
+            type={props.type}
+            className="form-control"
+            id={props.id}
+            name={props.name}
+            onChange={props.onChange}
+        />
     </FormFieldGrop>
 );
 
-export const SelectField = ( props, ...other ) => (
+export const Select = ( props, ...other ) => (
     <FormFieldGrop id={props.id} label={props.label}>
-        <Select options={props.options}  {...other}/>
+        <select id={props.id} name={props.name} className="form-control" onChange={props.onChange}>
+            <Options options={props.options} {...other} />
+        </select>
     </FormFieldGrop>
-);
-
-export const SelectField2 = ( props, ...other ) => (
-    <div className="form-group mb-1">
-        <label htmlFor={props.id} className="mb-1">{props.label}</label>
-        <Select options={props.options} {...other}/>
-    </div>
 );
 
 export const TextArea = props =>
     <div className="form-group">
         <label htmlFor={props.id} className="mb-1">{props.label}</label>
-        <textarea className="form-control" id={props.label} rows={props.rows}></textarea>
+        <textarea className="form-control" id={props.label} rows={props.rows} name={props.name} onChange={props.onChange}></textarea>
     </div>
