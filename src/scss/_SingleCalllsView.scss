@@ -1,0 +1,21 @@
+legend {
+    width: fit-content;
+    margin-bottom: 0;
+}
+
+.col-form-label {
+    padding-top: 0;
+}
+
+fieldset.box {
+    border: 1px solid #495057;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #495057;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #f8f9fa;
+}
