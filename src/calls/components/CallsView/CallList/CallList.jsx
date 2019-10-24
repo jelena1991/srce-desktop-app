@@ -1,11 +1,86 @@
 import React, { Component } from "react";
 
 class CallList extends Component {
+
     render() {
+        const peoples = [
+            {
+              "timeOfCall": "12:23",
+              "callDuration": "145",
+              "name": "Sincere",
+              "typeOfCall": "7",
+              "suicidalRisk": "5",
+              "volunteer": "lorem ipsum"
+            },
+            {
+              "timeOfCall": "14:23",
+              "callDuration": "15",
+              "name": "Lorem1",
+              "typeOfCall": "2",
+              "suicidalRisk": "3",
+              "volunteer": "ipsum"
+            },
+            {
+              "timeOfCall": "14:23",
+              "callDuration": "15",
+              "name": "Lorem1",
+              "typeOfCall": "2",
+              "suicidalRisk": "3",
+              "volunteer": "ipsum"
+            },
+            {
+              "timeOfCall": "12:23",
+              "callDuration": "145",
+              "name": "Sincere",
+              "typeOfCall": "7",
+              "suicidalRisk": "5",
+              "volunteer": "lorem ipsum"
+            },
+            {
+              "timeOfCall": "14:23",
+              "callDuration": "15",
+              "name": "Lorem1",
+              "typeOfCall": "2",
+              "suicidalRisk": "3",
+              "volunteer": "ipsum"
+            },
+            {
+              "timeOfCall": "14:23",
+              "callDuration": "15",
+              "name": "Lorem1",
+              "typeOfCall": "2",
+              "suicidalRisk": "3",
+              "volunteer": "ipsum"
+            },
+            {
+              "timeOfCall": "12:23",
+              "callDuration": "145",
+              "name": "Sincere",
+              "typeOfCall": "7",
+              "suicidalRisk": "5",
+              "volunteer": "lorem ipsum"
+            },
+            {
+              "timeOfCall": "14:23",
+              "callDuration": "15",
+              "name": "Lorem1",
+              "typeOfCall": "2",
+              "suicidalRisk": "3",
+              "volunteer": "ipsum"
+            },
+            {
+              "timeOfCall": "14:23",
+              "callDuration": "15",
+              "name": "Lorem1",
+              "typeOfCall": "2",
+              "suicidalRisk": "3",
+              "volunteer": "ipsum"
+            }
+        ]
 
         return (
-            <table class="table table-hover table-sm">
-                <thead class="thead-light">
+            <table className="table table-hover table-sm">
+                <thead className="thead-light">
                     <tr>
                         <th scope="col"> </th>
                         <th scope="col">Vreme</th>
@@ -17,145 +92,23 @@ class CallList extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    {
+                        peoples.map((people, index) =>
+                            <tr>
+                                <th scope="row">{index}</th>
+                                <td>{people.timeOfCall}</td>
+                                <td>{people.callDuration}</td>
+                                <td>{people.name}</td>
+                                <td>{people.typeOfCall}</td>
+                                <td>{people.suicidalRisk}</td>
+                                <td>{people.volunteer}</td>
+                            </tr>
+                        )
+                    }
                 </tbody>
             </table>
-
         );
     }
 }
+
 export default CallList;

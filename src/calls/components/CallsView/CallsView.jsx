@@ -18,14 +18,14 @@ class CallsView extends Component {
                     <div className="col-8 p-1">
                         <div className="monthAndYear text-right">
                             <div className="d-inline">Januar 2019</div>
-                            <select class="form-control d-inline mr-3" >
+                            <select className="form-control d-inline mr-3" >
                                 {
                                     months.map((month, index) => {
                                         return <option key={`month${index}`} value={index}>{month}</option>
                                     })
                                 }
                             </select>
-                            <select class="form-control d-inline" >
+                            <select className="form-control d-inline" >
                                 {
                                     years.map((year, index) => {
                                         return <option key={`year${index}`} value={year}>{year}</option>
