@@ -35,7 +35,7 @@ class CallsView extends Component {
                         <div className="calendar">kalendar</div>
                     </div>
                     <div className="col-12 p-1">
-                        <div className="callList">lista poziva</div>
+                        <div className="callList">lista poziva call list</div>
                     </div>
                 </div>
             </div>
