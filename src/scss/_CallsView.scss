@@ -10,9 +10,11 @@
 .monthAndYear div {
     margin-right: 15%;
 }
+
 .callList {
     height: 450px;
-    background-color: gray;
+    border: 1px solid black;
+    border-radius: 0.25rem;
 }
 
 .main .form-control{
@@ -22,6 +24,6 @@
 
 .btn-block {
     height: 27%;
-
 }
+
 
