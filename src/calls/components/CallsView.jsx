@@ -5,6 +5,7 @@ class CallsView extends Component {
     return (
       <div>
         <h4>Pregled svih poziva</h4>
+        <p>layout</p>
       </div>
     );
   }
