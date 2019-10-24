@@ -10,9 +10,9 @@ class CallsView extends Component {
                 <div className="row">
                     <div className="col-4 p-1">
                         <div className="monthAndYear"></div>
-                        <button type="button" className="btn btn-block btn-secondary">Unos poziva</button>
-                        <button type="button" className="btn btn-block btn-secondary">Brisanje poziva</button>
-                        <button type="button" className="btn btn-block btn-secondary">Detalji poziva</button>
+                        <button type="button" className="btn btn-block btn-light btn-outline-secondary">Unos poziva</button>
+                        <button type="button" className="btn btn-block btn-light btn-outline-secondary">Brisanje poziva</button>
+                        <button type="button" className="btn btn-block btn-light btn-outline-secondary">Detalji poziva</button>
                     </div>
                     <div className="col-8 p-1">
                         <div className="monthAndYear text-right">
