@@ -42,7 +42,7 @@ class SingleCallsView extends Component {
 
     render() {
         return (
-            <div className="container p-1">
+            <div className="container p-5">
                 <form  onSubmit={this.handleSubmit}>
                     <div className="row p-2">
                         <div className="col-6 px-2">
