@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import {Switch, BrowserRouter, Route} from 'react-router-dom';
-import CallsView from "./calls/components/CallsView.jsx";
+import {Switch, Route} from 'react-router-dom';
 import CallsStatistic from "./calls/components/CallsStatistic.jsx";
 import SingleCallsView from "./calls/components/SingleCallsView/SingleCallsView.jsx";
+import CallsView from "./calls/components/CallsView/CallsView.jsx";
 
 class Routes extends Component {
     render() {
