@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CallList from "./CallList/CallList.jsx";
+import Calendar from "./Calendar/Calendar.jsx";
 
 class CallsView extends Component {
     render() {
@@ -33,7 +34,11 @@ class CallsView extends Component {
                                 }
                             </select>
                         </div>
-                        <div className="calendar">kalendar1234</div>
+                        <div className="calendar">
+                            <Calendar />
+
+
+                        </div>
                     </div>
                     <div className="col-12 p-1">
                         <div className="callList table-responsive border-secondary">
