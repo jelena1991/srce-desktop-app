@@ -14,6 +14,7 @@ const pathToDatabase = path.join(__dirname, dbName);
 
 // Entitys
 const Person = require('./entity/Person').Person;
+const Call = require('./entity/Call').Call;
 
 function checkIfDatabaseExists() {
     fs.access(pathToDatabase, fs.F_OK, e => {
@@ -41,7 +42,7 @@ exports.CreateDatabase = () => {
     });
 };
 
-exports.DeleteDatabae = () => {
+exports.DeleteDatabase = () => {
     fs.unlink(pathToDatabase, e => {
         if (e) {
             console.log(e.message);
@@ -76,3 +77,9 @@ exports.addPersonToDb = () => {
     const person = new Person(0, 'djordje', 'Ljubicic');
     saveToDb('Person', person);
 };
+
+exports.addCallToDb = () => {
+    const call = new Call('1', '1875-08-12', 'Utorakssss', '11:08:36', '134', 'lorem', '1', '3', 'ipsum', 'dhbshv dhgbh ghgd efg', 'hegbehw ehfi hh ihifuh whf uiuregh iwug iu huh riu giue hui gerugerguy');
+    saveToDb('Call', call);
+};
+

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import CallList from "./CallList/CallList.jsx";
 import Calendar from "./Calendar/Calendar.jsx";
 
@@ -12,7 +13,7 @@ class CallsView extends Component {
                 <div className="row">
                     <div className="col-4 p-1">
                         <div className="monthAndYear"></div>
-                        <button type="button" className="btn btn-block btn-light btn-outline-secondary">Unos poziva</button>
+                        <Link className="btn btn-block btn-light btn-outline-secondary" to="/call">Unos poziva</Link>
                         <button type="button" className="btn btn-block btn-light btn-outline-secondary">Brisanje poziva</button>
                         <button type="button" className="btn btn-block btn-light btn-outline-secondary">Detalji poziva</button>
                     </div>

@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Select, Input, TextArea } from "../FormFields/FormFields.jsx";
-
+import { Link } from "react-router-dom";
+import { Call } from "../../../database/entity/Call.js";
 class SingleCallsView extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            callNumber: '',
+            id: '',
             dateOfCall: '',
             day: '',
             timeOfCall: '',
@@ -22,6 +23,16 @@ class SingleCallsView extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    saveToDb(entity, data) {
+        const repo = typeorm.getRepository(entity);
+
+        try {
+            repo.save(data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     handleChange(event) {
 
         const target = event.target;
@@ -34,22 +45,28 @@ class SingleCallsView extends Component {
     }
 
     handleSubmit(event) {
-        console.log(this.state);
 
+        const call = new Call(this.state.id, this.state.dateOfCall, this.state.day, this.state.timeOfCall, this.state.callDuration, this.state.personName, this.state.typeOfContact, this.state.typeOfCall, this.state.volunteer, this.state.shortDescription, this.state.note);
+        console.log(call);
+
+
+
+        // INSERT INTO call (id, dateOfCall, day, timeOfCall, callDuration, personName, typeOfContact, typeOfCall, shortDescription, note) VALUES (1, '1875-08-12', 'Utorak', '11:08:36', '134', 'lorem', '1', '3', 'dhbshv dhgbh ghgd efg', 'hegbehw ehfi hh ihifuh whf uiuregh iwug iu huh riu giue hui gerugerguy')
         //alert('Your favorite flavor is' + this.state.callNumber);
+
         event.preventDefault();
     }
 
     render() {
         return (
             <div className="container p-5">
-                <form  onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit}>
                     <div className="row p-2">
                         <div className="col-6 px-2">
                             <div>
                                 <fieldset className="box p-3">
                                     <legend className="px-1">Poziv</legend>
-                                    <Input id="callNumber" name="callNumber" type="text" label="R. broj poziva" onChange={this.handleChange}/>
+                                    <Input id="id" name="id" type="text" label="R. broj poziva" onChange={this.handleChange}/>
                                     <Select id="typeOfContact" name="typeOfContact" label="Vrsta kontakta" options={[1, 2, 3, 4, 5]} onChange={this.handleChange}/>
                                     <Input id="dateOfCall" name="dateOfCall" type="date" label="Datum" onChange={this.handleChange}/>
                                     <Input id="day" name="day" type="text" label="Dan" onChange={this.handleChange}/>
@@ -94,7 +111,7 @@ class SingleCallsView extends Component {
                             <button type="button" className="btn btn-secondary mx-2">Izmeni</button>
                             <button type="button" className="btn btn-secondary mx-2">Kopiraj</button>
                             <button type="button" className="btn btn-secondary mx-2">Prebaci u XLS</button>
-                            <button type="button" className="btn btn-secondary mx-2">Izađi</button>
+                            <Link className="btn btn-secondary mx-2" to="/">Izađi</Link>
                         </div>
                     </div>
                 </form>
